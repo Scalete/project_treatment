@@ -1,0 +1,36 @@
+@import 'core/reset';
+@import 'core/fonts';
+@import 'core/variables';
+@import 'core/mixin';
+@import 'core/media-queryes';
+@import 'core/buttons';
+
+@import 'blocks/header';
+
+body {
+    font-family: $font-avenir;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+
+    &.overflow-hide {
+        overflow: hidden;
+    }
+}
+
+picture {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding-bottom: 100%;
+  
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        content-visibility: auto;
+    }
+}

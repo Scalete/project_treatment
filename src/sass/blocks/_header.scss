@@ -1,0 +1,205 @@
+.header {
+    .supheader {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90deg, #274CD6 0%, #CF63C6 49.91%, #80D7C4 100%);
+        overflow: hidden;
+
+        .marquee{
+            font-size: 12px;
+            line-height: 1.3;
+            font-family: $font-avenir;
+            padding: 10px 0;
+            color: $white;
+            white-space: nowrap;
+            animation: marquee 20s infinite linear; /* notice the infinite */
+
+            :after{
+                content: "We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We ship inside the US only&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+
+        @keyframes marquee{
+            0% {
+                transform: translateX(0)
+            }
+            100% {
+                transform: translateX(-50%)
+            }
+        }
+    }
+
+    .header-overlay {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.4);
+    }
+
+    @include desktop {
+        .header-overlay {
+            display: none !important;
+        }
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 82px;
+        padding: 0 8.4%;
+        border-bottom: 1px solid $brand-black;
+
+        .header-links {
+            display: flex;
+            font-weight: 600;
+            line-height: 1.3;
+
+            .header-link {
+                margin-right: res(14, 22);
+                transition: transform $fast;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                @include hover {
+                    transform: translateY(-20%);
+                }
+            }
+        }
+
+        .nav-close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .login.mobile {
+            display: none;
+        }
+
+        .header-buttons {
+            display: flex;
+
+            .btn-shadow:first-child {
+                margin-right: 10px;
+            }
+
+            span {
+                font-weight: 600;
+                line-height: 1.3;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 54px;
+            height: 54px;
+            background: $brand-grey;
+            border-radius: 10px;
+            cursor: pointer;
+
+            span {
+                width: 26px;
+                height: 2px;
+                margin-bottom: 4px;
+                border-radius: 10px;
+                background-color: $brand-black;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        nav {
+            position: relative;
+            z-index: 2;
+            
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @include mobile {
+
+            nav {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 305px;
+                height: 281px;
+                padding: 0 26px;
+                opacity: 0;
+                visibility: hidden;
+                background: $light-grey;
+                border: 1px solid $brand-black;
+                border-radius: 15px;
+                transition: opacity $fast;
+
+                .btn-shadow {
+                    width: 57px;
+                }
+            }
+
+            .login.mobile {
+                display: block;
+                margin-top: 22px;
+            }
+
+            .nav-close {
+                display: flex;
+            }
+
+            .header-buttons {
+                .login {
+                    display: none;
+                }
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .header-links {
+                flex-direction: column;
+                margin-top: 66px;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                .header-link {
+                    margin-right: 0;
+                    margin-bottom: 12px;
+
+                    &.desktop {
+                        display: none;
+                    }
+
+                    &.blog {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
