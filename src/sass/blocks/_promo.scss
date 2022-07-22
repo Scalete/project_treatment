@@ -1,6 +1,5 @@
 .promo {
     display: flex;
-    height: 671px;
     background: linear-gradient(180deg, #DEDDE2 0%, #E3E6ED 44.29%, #DDE6EF 100%);
 
     &-text {
@@ -63,9 +62,12 @@
     }
 
     @include desktop {
+        height: 671px;
         justify-content: space-between;
 
         &-text {
+            position: relative;
+            z-index: 1;
             padding-right: 0;
         }
 
@@ -73,11 +75,10 @@
             display: none;
         }
 
-        > div {
-            width: 50%;
-        }
-
         &-img {
+            position: absolute;
+            right: 0;
+            z-index: 0;
             display: flex;
             justify-content: flex-end;
         }

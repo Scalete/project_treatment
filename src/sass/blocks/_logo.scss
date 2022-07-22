@@ -1,0 +1,41 @@
+.logo {
+    display: flex;
+    align-items: center;
+    padding: res(40, 23) 17px res(40, 23) res(18, 120);
+
+    &-wrapper {
+        display: grid;
+    }
+
+    &-button {
+        background-color: $brand-saimon;
+    }
+
+    @include desktop {
+        &-wrapper {
+            grid-template-columns: repeat(4, auto);
+            column-gap: res(0, 70);
+            margin-right: res(0, 72);
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+
+        &-wrapper {
+            grid-template-columns: repeat(2, auto);
+            gap: 18px 20px;
+            margin-bottom: 30px;
+
+            .order-2 {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .order-3 {
+                grid-column: 1;
+                grid-row: 2;
+            }
+        }
+    }
+}
