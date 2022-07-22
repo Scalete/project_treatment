@@ -6,6 +6,7 @@
 @import 'core/buttons';
 
 @import 'blocks/header';
+@import 'blocks/promo';
 
 body {
     font-family: $font-avenir;
@@ -33,4 +34,8 @@ picture {
         object-fit: cover;
         content-visibility: auto;
     }
+}
+
+main {
+    padding-top: 118px;
 }

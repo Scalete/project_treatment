@@ -1,4 +1,8 @@
 .header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+
     .supheader {
         display: flex;
         align-items: center;
@@ -15,7 +19,7 @@
             animation: marquee 20s infinite linear; /* notice the infinite */
 
             :after{
-                content: "We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We ship inside the US only&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                content: "We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We ship inside the US only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
             }
         }
 
@@ -35,7 +39,7 @@
         z-index: 1;
         display: none;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: rgba(51, 51, 51, 0.4);
     }
 
@@ -50,8 +54,9 @@
         justify-content: space-between;
         align-items: center;
         height: 82px;
-        padding: 0 8.4%;
+        padding: 0 res(20, 122);
         border-bottom: 1px solid $brand-black;
+        background-color: $white;
 
         .header-links {
             display: flex;
@@ -92,12 +97,16 @@
             display: flex;
 
             .btn-shadow:first-child {
-                margin-right: 10px;
+                margin-right: res(0, 10);
             }
 
             span {
                 font-weight: 600;
                 line-height: 1.3;
+            }
+
+            .main span {
+                padding-right: 9px;
             }
         }
 
@@ -139,9 +148,9 @@
 
             nav {
                 position: absolute;
-                top: 50%;
+                top: 100%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translateX(-50%);
                 width: 305px;
                 height: 281px;
                 padding: 0 26px;
@@ -150,7 +159,7 @@
                 background: $light-grey;
                 border: 1px solid $brand-black;
                 border-radius: 15px;
-                transition: opacity $fast;
+                transition: opacity $normal;
 
                 .btn-shadow {
                     width: 57px;

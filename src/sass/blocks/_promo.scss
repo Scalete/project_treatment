@@ -1,0 +1,85 @@
+.promo {
+    display: flex;
+    height: 671px;
+    background: linear-gradient(180deg, #DEDDE2 0%, #E3E6ED 44.29%, #DDE6EF 100%);
+
+    &-text {
+        max-width: res(300, 640);
+        margin-top: res(43, 100);
+        padding: 0 res(30, 121);
+    }
+
+    &-title {
+        margin-top: 20px;
+        margin-bottom: res(11, 30);
+        font-weight: 700;
+        font-size: res(44, 68);
+        letter-spacing: -3px;
+
+        span {
+            font-family: $font-playfair;
+        }
+
+        .blue {
+            color: $brand-blue;
+        }
+
+        .red {
+            color: $brand-red;
+        }
+    }
+
+    .btn-shadow {
+        width: 153px;
+    }
+
+    .action.main {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        background-color: $button-blue;
+    }
+
+    img {
+        object-fit: cover;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        background: linear-gradient(270deg, #CFCDCE 0%, #DADADC 44.29%, #DEDDE2 100%);
+
+        &-text {
+            max-width: 100%;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .btn-shadow {
+            margin: 0 auto;
+        }
+    }
+
+    @include desktop {
+        justify-content: space-between;
+
+        &-text {
+            padding-right: 0;
+        }
+
+        &-suptitle {
+            display: none;
+        }
+
+        > div {
+            width: 50%;
+        }
+
+        &-img {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

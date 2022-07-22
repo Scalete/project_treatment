@@ -1,4 +1,6 @@
 .action {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,12 +9,8 @@
     background-color: $white;
     transition: transform $fast;
 
-    &.kit {
+    &.main {
         padding: 15px 27px;
-
-        span {
-            padding-right: 9px;
-        }
     }
 
     &.login {
@@ -36,6 +34,6 @@
         height: 100%;
         background-color: $brand-black;
         border-radius: 10px;
-        z-index: -1;
+        z-index: 0;
     }
 }
