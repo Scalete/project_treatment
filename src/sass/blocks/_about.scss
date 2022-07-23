@@ -1,0 +1,52 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding-top: res(31, 100);
+    background: $brand-black;
+
+    &-wrapper {
+        max-width: res(339, 490);
+    }
+
+    &-title {
+        font-size: res(36, 48);
+        font-weight: 700;
+        letter-spacing: -3px;
+    }
+
+    &-description {
+        margin-top: res(24, 28);
+        margin-bottom: res(20, 36);
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+    }
+
+    @include desktop {
+        height: 640px;
+        padding-right: res(-100, 232);
+        padding-left: res(0, 116);
+
+        &-wrapper {
+            margin-left: 30px;
+        }
+
+        svg {
+            margin-right: 30px;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &-wrapper {
+            margin-bottom: 20px;
+        }
+        
+        svg {
+            width: 309px;
+            height: 373px;
+        }
+    }
+}

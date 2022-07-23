@@ -14,28 +14,6 @@
         font-weight: 700;
         font-size: res(44, 68);
         letter-spacing: -3px;
-
-        span {
-            font-family: $font-playfair;
-        }
-
-        .blue {
-            color: $brand-blue;
-        }
-
-        .red {
-            color: $brand-red;
-        }
-    }
-
-    .btn-shadow {
-        width: 153px;
-    }
-
-    .action.main {
-        padding-top: 22px;
-        padding-bottom: 22px;
-        background-color: $button-blue;
     }
 
     img {

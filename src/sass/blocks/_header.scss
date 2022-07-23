@@ -160,10 +160,6 @@
                 border: 1px solid $brand-black;
                 border-radius: 15px;
                 transition: opacity $normal;
-
-                .btn-shadow {
-                    width: 57px;
-                }
             }
 
             .login.mobile {
@@ -204,7 +200,7 @@
                         display: none;
                     }
 
-                    &.blog {
+                    &.blog-link {
                         margin-bottom: 0;
                     }
                 }

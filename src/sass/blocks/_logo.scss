@@ -7,10 +7,6 @@
         display: grid;
     }
 
-    &-button {
-        background-color: $brand-saimon;
-    }
-
     @include desktop {
         &-wrapper {
             grid-template-columns: repeat(4, auto);

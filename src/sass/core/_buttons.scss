@@ -36,4 +36,39 @@
         border-radius: 10px;
         z-index: 0;
     }
+
+    &.kit-btn {
+        width: 140px;
+    }
+
+    &.promo-btn, &.slider-button.blue {
+
+        .action.main {
+            padding-top: 22px;
+            padding-bottom: 22px;
+            background-color: $light-blue;
+        }
+
+        width: 155px;
+    }
+
+    &.about-btn {
+        width: 155px;
+
+        .action.main {
+            background-color: $brand-pink;
+        }
+
+        &::after {
+            background-color: $white;
+        }
+    }
+
+    &.logo-btn .action.main, &.slider-button.saimon .action.main {
+        background-color: $brand-saimon;
+    }
+
+    &.slider-button.saimon {
+        width: 155px;
+    }
 }
