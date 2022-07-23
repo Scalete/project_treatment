@@ -1,0 +1,179 @@
+.product {
+    display: grid;
+    
+    &-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        outline: $brand-black solid 1px;
+        background-color: $brand-white;
+
+        > svg {
+            position: absolute;
+        }
+    }
+
+    &-notification {
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: $font-monument;
+            font-size: res(14, 16);
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+    }
+
+    &-content {
+        margin-top: res(70, 98);
+    }
+
+    &-title {
+        margin-bottom: 18px;
+        font-size: res(36, 48);
+        font-weight: 700;
+        letter-spacing: -3px;
+    }
+
+    &-description {
+        max-width: 390px;
+        margin-bottom: res(60, 50);
+        letter-spacing: -0.03em;
+    }
+    
+    @include desktop {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 601px);
+
+        &-wrapper {
+            &.first {
+                .svg-coffee {
+                    top: 32%;
+                    left: 20%;
+                }
+    
+                .svg-blue {
+                    bottom: 74px;
+                    right: 210px;
+                }
+    
+                .svg-red {
+                    top: 215px;
+                    right: 91px;
+                }
+            }
+    
+            &.second {
+                .svg-coffee {
+                    top: 43.2%;
+                    right: 23.6%;
+                }
+    
+                .svg-blue {
+                    top: 192px;
+                    left: 69px;
+                }
+    
+                .svg-red {
+                    bottom: 99px;
+                    left: 204px;
+                }
+            }
+    
+            &.third {
+                .svg-red {
+                    bottom: 36%;
+                    left: 20%;
+                }
+            }
+    
+            &.fourth {
+                .svg-coffee {
+                    top: 45%;
+                    right: 26.5%;
+                }
+    
+                .svg-blue {
+                    top: 210px;
+                    left: 94px;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        grid-template-columns: auto;
+
+        &-content {
+            padding: 0 76px 72px;
+        }
+    
+        .svg-coffee, .svg-blue, .svg-red {
+            width: 75px;
+            height: 75px;
+        }
+
+        &-wrapper {
+            &.first {
+                .svg-coffee {
+                    top: 49%;
+                    left: 8%;
+                }
+    
+                .svg-blue {
+                    bottom: 15px;
+                    right: 52px;
+                }
+    
+                .svg-red {
+                    top: 198px;
+                    right: 38px;
+                }
+            }
+    
+            &.second {
+                .svg-coffee {
+                    left: 17.6%;
+                    bottom: 11%;
+                }
+    
+                .svg-blue {
+                    top: 176px;
+                    left: 25px;
+                }
+    
+                .svg-red {
+                    top: 179px;
+                    right: 38px;
+                }
+            }
+    
+            &.third {
+                .svg-red {
+                    right: 11%;
+                    top: 37%;
+                }
+            }
+    
+            &.fourth {
+                .svg-coffee {
+                    top: 42%;
+                    left: 8%;
+                }
+    
+                .svg-blue {
+                    bottom: 26px;
+                    right: 53px;
+                }
+            }
+        }
+    }
+}
