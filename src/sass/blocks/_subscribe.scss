@@ -1,0 +1,79 @@
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: res(66, 96) 0 res(66, 118) 0;
+    text-align: center;
+    border-bottom: 1px solid $brand-black;
+    background: linear-gradient(98.6deg, #D9CFFF 0%, #EBF1FF 44.29%, #DDE6EF 100%);
+
+    &-title {
+        margin-bottom: 32px;
+        font-weight: 700;
+        letter-spacing: -3px;
+
+        .orange {
+            font-size: res(36, 60);
+        }
+
+        .black {
+            font-size: res(28, 48);
+        }
+    }
+    
+    &-images {
+        display: flex;
+    }
+    
+    &-content {
+        margin-top: res(15, 31);
+    }
+    
+    &-heart {
+        margin-top: res(27, 46);
+        align-self: flex-end;
+    }
+
+    &-message {
+        margin: 0 8px 0 res(27, 36);
+        align-self: flex-start;
+    }
+
+    &-description {
+        margin-bottom: 27px;
+        font-size: 18px;
+    }
+
+    form {
+        height: 59px;
+
+        input {
+            width: res(180, 260);
+        }
+
+        button {
+            padding: 0 res(23, 36);
+        }
+    }
+
+    @include mobile {
+        &-heart {
+            width: 68px;
+            margin-bottom: 14px;
+        }
+    
+        &-message {
+            width: 105px;
+        }
+
+        &-like {
+            width: 80px;
+            height: 109px;
+        }
+
+        &-content {
+            padding: 0 18px;
+        }
+    }
+}

@@ -4,6 +4,7 @@
 @import 'core/mixin';
 @import 'core/media-queryes';
 @import 'core/buttons';
+@import 'core/form';
 
 @import 'blocks/header';
 @import 'blocks/promo';
@@ -11,6 +12,7 @@
 @import 'blocks/about';
 @import 'blocks/slider';
 @import 'blocks/product';
+@import 'blocks/subscribe';
 
 body {
     font-family: $font-avenir;
@@ -65,5 +67,14 @@ main {
 
     .saimon {
         color: $brand-saimon;
+    }
+
+    .orange {
+        font-family: $font-avenir;
+        color: $brand-orange;
+    }
+
+    .black {
+        color: $brand-black;
     }
 }
