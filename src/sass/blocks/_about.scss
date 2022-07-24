@@ -12,6 +12,7 @@
         font-size: res(36, 48);
         font-weight: 700;
         letter-spacing: -3px;
+        color: $brand-white;
     }
 
     &-description {
@@ -20,6 +21,7 @@
         font-size: 18px;
         line-height: 1.5;
         letter-spacing: -0.01em;
+        color: $brand-white;
     }
 
     @include desktop {
