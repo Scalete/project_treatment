@@ -1,0 +1,90 @@
+.contacts {
+    display: flex;
+
+    &-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:first-child {
+            padding-top: res(31, 99);
+
+            .contacts-content {
+                padding-left: res(18, 85);
+            }
+        }
+
+        &:last-child {
+            padding-top: res(41, 71);
+            background: url('../img/contacts/bg.jpg') no-repeat 50%/cover;
+
+            .contacts-img {
+                justify-self: flex-end;
+            }
+        }
+    }
+
+    &-content {
+        align-self: flex-start;
+    }
+
+    &-title {
+        margin-top: res(9, 20);
+        font-weight: 700;
+        font-size: res(40, 70);
+        letter-spacing: -3px;
+    }
+
+    &-text {
+        display: block;
+        margin-top: res(9, 15);
+        font-size: res(14, 22);
+        line-height: 1.8;
+        letter-spacing: -0.02em;
+    }
+
+    &-second-title {
+        margin: res(9, 20) 0 res(27, 40) 0;
+        font-weight: 700;
+        font-size: res(40, 52);
+        letter-spacing: -3px;
+        text-align: center;
+        color: $brand-white;
+    }
+
+    &-img {
+        padding: 0 28px;
+    }
+
+    @include desktop {
+        &-block {
+            width: 50%;
+
+            &:first-child {
+                border-right: 1px solid $brand-black;
+            }
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+        
+        &-block {
+            &:first-child {
+                padding-bottom: 12px;
+                border-bottom: 1px solid $brand-black;
+            }
+
+            &:last-child {
+                .contacts-img {
+                    padding: 0 88px;
+                }
+            }
+        }
+
+        svg, .svg-tiktok {
+            width: 44px;
+            height: 44px;
+        }
+    }
+}
