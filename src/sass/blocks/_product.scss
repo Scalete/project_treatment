@@ -48,6 +48,14 @@
         margin-bottom: res(60, 50);
         letter-spacing: -0.03em;
     }
+
+    &-image {
+        transition: transform $fast;
+
+        @include hover {
+            transform: scale(1.1);
+        }
+    }
     
     @include desktop {
         grid-template-columns: repeat(2, 50%);

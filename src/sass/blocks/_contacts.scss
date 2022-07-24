@@ -56,6 +56,14 @@
         padding: 0 28px;
     }
 
+    &-social {
+        transition: transform $fast;
+
+        @include hover {
+            transform: scale(1.1);
+        }
+    }
+
     @include desktop {
         &-block {
             width: 50%;
@@ -82,7 +90,7 @@
             }
         }
 
-        svg, .svg-tiktok {
+        .svg-tiktok, .svg-spotify {
             width: 44px;
             height: 44px;
         }
