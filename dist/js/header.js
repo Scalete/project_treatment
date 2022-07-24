@@ -39,4 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', () => {
         closeNav(closeElem);
     });
+
+    //close on escape
+
+    document.addEventListener('keyup', function(e) {
+        if (e.code === 'Escape' && nav.classList.contains("active")) {
+            closeNav(closeElem);
+        }
+    });
 });
